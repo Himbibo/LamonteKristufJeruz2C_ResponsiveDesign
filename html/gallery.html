@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/gallery.css">
+    <title>Joker Gallery</title>
+</head>
+<body>
+    <div class="bounty-container">
+        <a href="../index.html">&LeftArrow; Go back</a>
+        <h1>Joker Gallery</h1>
+        <div class="line"></div>
+        <div class="image-container">
+            <div class="image"><img src="../img/1.jpg" alt=""></div>
+            <div class="image"><img src="../img/2.jpg" alt=""></div>
+            <div class="image"><img src="../img/3.jpg" alt=""></div>
+            <div class="image"><img src="../img/4.jpg" alt=""></div>
+            <div class="image"><img src="../img/5.jpg" alt=""></div>
+            <div class="image"><img src="../img/6.jpg" alt=""></div>
+            <div class="image"><img src="../img/7.jpg" alt=""></div>
+            <div class="image"><img src="../img/8.jpg" alt=""></div>
+            <div class="image"><img src="../img/9.jpg" alt=""></div>
+            <div class="image"><img src="../img/10.jpg" alt=""></div>
+        </div>
+
+        <div class="popup">
+            <span>&times;</span>
+            <img src="../img/1.jpg" alt="">
+        </div>
+    </div>
+    <footer>
+        <p>Copyright © 2023 Himbiboo <br>
+            All rights reserved.</p>
+      </footer>
+
+    <script>
+        document.querySelectorAll('.image-container img').forEach(image =>{
+            image.onclick = () => {
+                document.querySelector('.popup').style.display = 'block';
+                document.querySelector('.popup img').src = image.getAttribute('src');
+            }
+        });
+
+        document.querySelector('.popup span').onclick = () =>{
+            document.querySelector('.popup').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
